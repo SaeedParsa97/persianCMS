@@ -5,6 +5,7 @@ import { TfiCommentAlt } from "react-icons/tfi";
 import { FaUsers } from "react-icons/fa";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { BsCurrencyDollar } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -13,38 +14,40 @@ const Sidebar = () => {
 
       <ul className="sidebar-links">
         <li>
-          <a href="#">
+          <Link to="/">
             <AiOutlineHome className="icon" />
             صفحه اصلی
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to="/products">
             <MdOutlineProductionQuantityLimits className="icon" />
             محصولات
-          </a>
+          </Link>
         </li>
         <li className="active">
-          <a href="#">
+          <Link to="comments">
             <TfiCommentAlt className="icon" />
             کامنت ها
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to="users">
             <FaUsers className="icon" />
             کاربران
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
-            <IoBagCheckOutline className="icon"/>
-            سفارشات</a>
+          <Link to="orders">
+            <IoBagCheckOutline className="icon" />
+            سفارشات
+          </Link>
         </li>
         <li>
-          <a href="#">
-            <BsCurrencyDollar className="icon"/>
-            تخفیف ها</a>
+          <Link to="offs">
+            <BsCurrencyDollar className="icon" />
+            تخفیف ها
+          </Link>
         </li>
       </ul>
     </div>

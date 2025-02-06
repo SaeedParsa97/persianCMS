@@ -1,20 +1,23 @@
 import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
-import './App.css';
+import "./App.css";
+import { Routes, Route, useRoutes } from "react-router-dom";
+import routes from "./routes";
 
 
 function App() {
 
+  const router = useRoutes(routes)
   return (
     <>
       <Sidebar />
       <div className="main">
         <Header />
-        {/* r */}
+        
+        {router}
       </div>
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
